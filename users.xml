@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Users>
+<User>
+<UserId>2</UserId>
+<Login>bartek</Login>
+<Password>456</Password>
+</User>
+<User/>
+<User>
+<UserId>123</UserId>
+<Login>Tomek</Login>
+<Password>2024-12-12</Password>
+</User>
+<User>
+<UserId>123</UserId>
+<Login>154.55</Login>
+<Password>2024-12-12</Password>
+</User>
+</Users>

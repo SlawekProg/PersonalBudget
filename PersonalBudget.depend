@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1733586185 source:c:\users\lenovo\desktop\personalbudget\personalbudget\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1733586509 c:\users\lenovo\desktop\personalbudget\personalbudget\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1734347628 source:c:\users\lenovo\desktop\personalbudget\personalbudget\main.cpp
+	<iostream>
+	"Markup.h"
+
