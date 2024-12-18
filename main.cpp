@@ -24,7 +24,7 @@ void addItemElementToXml(CMarkup xml)
 */
 int main()
 {
-
+/*
     CMarkup xml;
 
     bool fileExists = xml.Load( "users.xml" );
@@ -46,6 +46,6 @@ int main()
 
 
     xml.Save("users.xml");
-
+*/
     return 0;
 }
