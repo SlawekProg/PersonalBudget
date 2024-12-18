@@ -17,3 +17,17 @@
 	<iostream>
 	"Markup.h"
 
+1733586185 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1733586509 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
