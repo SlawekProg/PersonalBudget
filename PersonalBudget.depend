@@ -31,3 +31,80 @@
 	<string>
 	<afx.h>
 
+1734535762 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmainapp.cpp
+	"BudgetMainApp.h"
+
+1734515278 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\main.cpp
+	<iostream>
+	"Markup.h"
+
+1734611603 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmainapp.h
+	<iostream>
+	"UserManager.h"
+	"BudgetManager.h"
+
+1734535763 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.cpp
+	"BudgetManager.h"
+
+1734612197 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.h
+	<iostream>
+	"OperationFile.h"
+	"Operation.h"
+	"Type.h"
+	<vector>
+
+1734535763 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\datemethods.cpp
+	"DateMethods.h"
+
+1734616623 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\datemethods.h
+	<iostream>
+	<map>
+	<string>
+
+1734535763 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\file.cpp
+	"File.h"
+
+1734635463 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\file.h
+	<iostream>
+	"Markup.h"
+
+1734535762 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\operationfile.cpp
+	"OperationFile.h"
+
+1734637245 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\operationfile.h
+	"Operation.h"
+	<iostream>
+	<vector>
+
+1734535763 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\userfile.cpp
+	"UserFile.h"
+
+1734637245 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\userfile.h
+	<iostream>
+	<vector>
+	"User.h"
+
+1734535763 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.cpp
+	"UserManager.h"
+
+1734638195 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.h
+	<iostream>
+	<vector>
+	"UserFile.h"
+	"User.h"
+
+1734535772 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\utils.cpp
+	"Utils.h"
+
+1734638334 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\utils.h
+	<iostream>
+
+1734611629 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\operation.h
+	<iostream>
+
+1734610558 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\type.h
+	<iostream>
+
+1734637011 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\user.h
+	<iostream>
+
