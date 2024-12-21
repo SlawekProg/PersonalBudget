@@ -9,7 +9,7 @@ class File
 {
     const string FILE_NAME;
 protected:
-    File (string fileName);
+    File(string fileName):FILE_NAME(fileName){};
 
     int lastId;
     CMarkup xmlDoc;

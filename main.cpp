@@ -1,7 +1,10 @@
 #include <iostream>
 #include "Markup.h"
+#include "BudgetMainApp.h"
 
 using namespace std;
+
+
 /*
 void addUserElementToXml(CMarkup xml)
 {
@@ -24,6 +27,9 @@ void addItemElementToXml(CMarkup xml)
 */
 int main()
 {
+    BudgetMainApp budgetMainApp("users.xml","incomes.xml","expenses.xml");
+
+
 /*
     CMarkup xml;
 

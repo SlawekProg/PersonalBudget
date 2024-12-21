@@ -19,7 +19,8 @@ class UserManager
     void findUserById(vector <User>::iterator &itr);
 
 public:
-    UserManager(string UserFileName);
+    UserManager(string userFileName)
+    : userFile(userFileName){};
 
     void registerUser();
     void loginUser();

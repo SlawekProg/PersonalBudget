@@ -3,21 +3,20 @@
 #include <iostream>
 #include <vector>
 #include "User.h"
+#include "File.h"
 
 
 using namespace std;
 
-class UserFile
+class UserFile : public File
 {
 public:
 
-    UserFile(string userFileName);
+    UserFile(string userFileName) : File(userFileName){}
 
     vector <User> loadUserFromFile();
     bool addUserToFile(const User &user);
     bool changePasswordInFile(int id,const string &password);
 
-
 };
-
 #endif

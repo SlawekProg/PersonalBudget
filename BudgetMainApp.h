@@ -14,7 +14,16 @@ class BudgetMainApp
     const string EXPENSE_FILE_NAME;
 
 public:
-    BudgetMainApp(string userFileName,string incomeFileName, string expenseFileName);
+    BudgetMainApp(string userFileName,string incomeFileName, string expenseFileName)
+    :userManager(userFileName),INCOME_FILE_NAME(incomeFileName),EXPENSE_FILE_NAME(expenseFileName)
+    {
+        budgetManager = NULL;
+    }
+    ~BudgetMainApp()
+    {
+        delete budgetManager;
+        budgetManager = NULL;
+    };
 
     bool isUserLoggedIn();
     void registerUser();
