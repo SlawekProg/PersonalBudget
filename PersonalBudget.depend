@@ -31,13 +31,14 @@
 	<string>
 	<afx.h>
 
-1734638752 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmainapp.cpp
+1735300259 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmainapp.cpp
 	"BudgetMainApp.h"
 
-1734692478 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\main.cpp
+1735300590 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\main.cpp
 	<iostream>
 	"Markup.h"
 	"BudgetMainApp.h"
+	"Utils.h"
 
 1734694122 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmainapp.h
 	<iostream>
@@ -62,7 +63,7 @@
 	<map>
 	<string>
 
-1734699000 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\file.cpp
+1735298317 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\file.cpp
 	"File.h"
 
 1734697290 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\file.h
@@ -95,11 +96,12 @@
 	"UserFile.h"
 	"User.h"
 
-1734638752 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\utils.cpp
+1735300590 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\utils.cpp
 	"Utils.h"
 
-1734638752 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\utils.h
+1735299809 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\utils.h
 	<iostream>
+	<string.h>
 
 1734638752 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\operation.h
 	<iostream>

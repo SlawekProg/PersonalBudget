@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Markup.h"
 #include "BudgetMainApp.h"
+#include "Utils.h"
 
 using namespace std;
 
@@ -27,8 +28,37 @@ void addItemElementToXml(CMarkup xml)
 */
 int main()
 {
+    Utils utils;
     BudgetMainApp budgetMainApp("users.xml","incomes.xml","expenses.xml");
 
+    char choice = '9';
+	while (true)
+	{
+		if (!budgetMainApp.isUserLoggedIn())
+		{
+			choice = utils.getCharacter();
+
+			if (choice == '1') budgetMainApp.registerUser();
+			else if (choice == '2') budgetMainApp.loginUser();
+			else if (choice == '9') exit(0);
+		}
+		else
+		{
+			while (true)
+			{
+				choice = utils.getCharacter();
+
+				if (choice == '1') budgetMainApp.addIncome();
+				else if (choice == '2') budgetMainApp.addExpense();
+				else if (choice == '3') budgetMainApp.showCurrentMonthBalance();
+				else if (choice == '4') budgetMainApp.showPreviousMonthBalance();
+				else if (choice == '5') budgetMainApp.showCustomPeriodBalance();
+				else if (choice == '7') budgetMainApp.changeUserPassword();
+				else if (choice == '8') { budgetMainApp.logoutUser(); break; }
+			}
+		}
+	}
+	return 0;
 
 /*
     CMarkup xml;
