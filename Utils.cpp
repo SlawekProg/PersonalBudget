@@ -3,11 +3,26 @@
 using namespace std;
 
 char Utils::getCharacter(){
-    cout << "wpisalem znak";
-    return '9';
+    string input = "";
+    char sign = { 0 };
+
+    while (true)
+    {
+        getline(cin, input);
+
+        if (input.length() == 1)
+        {
+            sign = input[0];
+            break;
+        }
+        cout << "To nie jest pojedynczy znak. Wpisz ponownie." << endl;
+    }
+    return sign;
 };
 string Utils::readLine(){
-    return "0";
+    string wejscie = "";
+    getline(cin, wejscie);
+    return wejscie;
 };
 bool Utils::validateInput(string input){
     return 1;

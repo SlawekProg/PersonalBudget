@@ -4,12 +4,13 @@
 #include <vector>
 #include "UserFile.h"
 #include "User.h"
+#include "Utils.h"
 
 using namespace std;
 
 class UserManager
 {
-    int loggedUserId;
+    int loggedUserId = 0;
     vector <User> users;
     UserFile userFile;
 
@@ -19,8 +20,20 @@ class UserManager
     void findUserById(vector <User>::iterator &itr);
 
 public:
-    UserManager(string userFileName)
-    : userFile(userFileName){};
+    UserManager(string userFileName):userFile(userFileName){
+        users = userFile.loadUserFromFile();
+
+        for (const User& user : users) {
+
+        cout << "UserId: " << user.id << std::endl;
+        cout << "FirstName: " << user.firstName << std::endl;
+        cout << "LastName: " << user.lastName << std::endl;
+        cout << "Login: " << user.login << std::endl;
+        cout << "Password: " << user.password << std::endl;
+        cout << "------------------------" << std::endl;
+    }
+    system("pause");
+    };
 
     void registerUser();
     void loginUser();

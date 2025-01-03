@@ -5,33 +5,22 @@
 
 using namespace std;
 
-
-/*
-void addUserElementToXml(CMarkup xml)
-{
-    string login,userID,password;
-
-    xml.AddElem("UserId",userID);
-    xml.AddElem("Login", login);
-    xml.AddElem("Password", password);
-
-}
-void addItemElementToXml(CMarkup xml)
-{
-    string date,item,incomeId,amount;
-
-    xml.AddElem("Date",date);
-    xml.AddElem("Item",item);
-    xml.AddElem("IncomeId",incomeId);
-    xml.AddElem("Amount",amount);
-}
-*/
 int main()
 {
     Utils utils;
     BudgetMainApp budgetMainApp("users.xml","incomes.xml","expenses.xml");
 
-    char choice = '9';
+    char choice = '0';
+     system("cls");
+
+     cout << "    >>>  MAIN MENU  <<<" << endl;
+     cout << "---------------------------" << endl;
+     cout << "1. Regisration" << endl;
+     cout << "2. Log in" << endl;
+     cout << "9. End program" << endl;
+     cout << "---------------------------" << endl;
+     cout << "Your choice: ";
+
 	while (true)
 	{
 		if (!budgetMainApp.isUserLoggedIn())
@@ -44,6 +33,22 @@ int main()
 		}
 		else
 		{
+		      system("cls");
+
+              cout << " >>> USER MENU <<<" << endl;
+              cout << "---------------------------" << endl;
+              cout << "1. Add Income" << endl;
+              cout << "2. Add Expense" << endl;
+              cout << "3. Show Current Month Balance" << endl;
+              cout << "4. Show Previous Month Balance" << endl;
+              cout << "5. Show Custom Period Balance" << endl;
+
+              cout << "---------------------------" << endl;
+              cout << "7. Change User Password" << endl;
+              cout << "8. Logout User" << endl;
+              cout << "---------------------------" << endl;
+              cout << "Your choice: ";
+
 			while (true)
 			{
 				choice = utils.getCharacter();
@@ -59,29 +64,4 @@ int main()
 		}
 	}
 	return 0;
-
-/*
-    CMarkup xml;
-
-    bool fileExists = xml.Load( "users.xml" );
-
-    if (!fileExists)
-    {
-        xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
-        xml.AddElem("Users");
-    }
-
-    xml.FindElem();
-    xml.IntoElem();
-    xml.AddElem("User");
-    xml.IntoElem();
-
-    xml.AddElem("UserId","123");
-    xml.AddElem("Login", "154.55");
-    xml.AddElem("Password", "2024-12-12");
-
-
-    xml.Save("users.xml");
-*/
-    return 0;
 }

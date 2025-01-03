@@ -3,10 +3,14 @@
 using namespace std;
 
     bool BudgetMainApp::isUserLoggedIn(){
-
+        if (userManager.getLoggedUserId() > 0)
+	return true;
+else
+	return false;
     }
-    void BudgetMainApp::registerUser(){
 
+    void BudgetMainApp::registerUser(){
+        userManager.registerUser();
     }
     void BudgetMainApp::loginUser(){
 
