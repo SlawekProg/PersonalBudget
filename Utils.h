@@ -8,9 +8,9 @@ using namespace std;
 class Utils
 {
 public:
-    char getCharacter();
-    string readLine();
-    bool validateInput(string input);
+    static char getCharacter();
+    static string readLine();
+    static bool validateInput(string input);
 };
 
 #endif
