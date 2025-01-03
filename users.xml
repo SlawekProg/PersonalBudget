@@ -14,4 +14,11 @@
 <Login>antos</Login>
 <Password>123</Password>
 </User>
+<User>
+<UserId>3</UserId>
+<FirstName>Martin</FirstName>
+<LastName>Jager</LastName>
+<Login>Marti</Login>
+<Password>123</Password>
+</User>
 </Users>

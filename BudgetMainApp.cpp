@@ -13,7 +13,7 @@ else
         userManager.registerUser();
     }
     void BudgetMainApp::loginUser(){
-
+        userManager.loginUser();
     }
     void BudgetMainApp::changeUserPassword(){
 
