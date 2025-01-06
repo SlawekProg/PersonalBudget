@@ -31,10 +31,10 @@
 	<string>
 	<afx.h>
 
-1735927464 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmainapp.cpp
+1736169852 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmainapp.cpp
 	"BudgetMainApp.h"
 
-1735924445 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\main.cpp
+1736177643 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\main.cpp
 	<iostream>
 	"Markup.h"
 	"BudgetMainApp.h"
@@ -48,7 +48,7 @@
 1734638752 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.cpp
 	"BudgetManager.h"
 
-1734638752 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.h
+1736168895 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.h
 	<iostream>
 	"OperationFile.h"
 	"Operation.h"
@@ -63,7 +63,7 @@
 	<map>
 	<string>
 
-1735301858 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\file.cpp
+1736187989 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\file.cpp
 	"File.h"
 
 1734697290 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\file.h
@@ -73,12 +73,14 @@
 1734638752 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\operationfile.cpp
 	"OperationFile.h"
 
-1734638752 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\operationfile.h
+1736169262 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\operationfile.h
 	"Operation.h"
 	<iostream>
 	<vector>
+	"File.h"
+	"Markup.h"
 
-1735924445 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\userfile.cpp
+1736171897 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\userfile.cpp
 	"UserFile.h"
 
 1735924445 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\userfile.h
@@ -88,7 +90,7 @@
 	"File.h"
 	"Markup.h"
 
-1735927464 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.cpp
+1736174310 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.cpp
 	"UserManager.h"
 
 1735924445 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.h

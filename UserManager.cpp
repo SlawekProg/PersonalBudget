@@ -87,14 +87,29 @@ using namespace std;
     system("pause");
     }
     void UserManager::changeUserPassword(){
+        string newPassword = "";
+        cout << "Podaj nowe haslo: ";
+        newPassword = Utils::readLine();
 
+        for(vector <User> ::iterator itr = users.begin(); itr != users.end(); itr++){
+            if(itr->id == loggedUserId){
+                itr->password = newPassword;
+            }
+        }
+       if(userFile.changePasswordInFile(loggedUserId, newPassword)) cout << "Haslo zostalo zmienione: ";
+       system("pause");
     }
     void UserManager::logoutUser(){
-
+        loggedUserId = 0;
+        cout << "Uzytkownik zostal wylogowany";
+        cout << loggedUserId;
+        system("pause");
     }
 
     bool UserManager::isUserLoggedIn(){
-
+        if(loggedUserId == 0){
+            return false;
+        }else return true;
     }
     int UserManager::getLoggedUserId(){
         return loggedUserId;

@@ -3,43 +3,44 @@
 using namespace std;
 
     vector <User> UserFile::loadUserFromFile(){
-    vector <User> users;
-    CMarkup xml;
 
-    if (!xml.Load(getFileName())) {
-        cerr << "Failed to load XML file: " << getFileName() << endl;
-    }
-    if (!xml.FindElem("Users")) {
-        cerr << "No 'Users' root element found in XML file!" << endl;
-    }
+        vector <User> users;
+        CMarkup xml;
 
-    xml.IntoElem();
+        if (!xml.Load(getFileName())) {
+            cerr << "Failed to load XML file: " << getFileName() << endl;
+        }
+        if (!xml.FindElem("Users")) {
+            cerr << "No 'Users' root element found in XML file!" << endl;
+        }
 
-    while (xml.FindElem("User")) {
-        User user;
         xml.IntoElem();
 
-        if (xml.FindElem("UserId")) {
-            user.id = std::stoi(xml.GetData());
-        }
-        if (xml.FindElem("FirstName")) {
-            user.firstName = xml.GetData();
-        }
-        if (xml.FindElem("LastName")) {
-            user.lastName = xml.GetData();
-        }
-        if (xml.FindElem("Login")) {
-            user.login = xml.GetData();
-        }
-        if (xml.FindElem("Password")) {
-            user.password = xml.GetData();
-        }
+        while (xml.FindElem("User")) {
+            User user;
+            xml.IntoElem();
 
-        xml.OutOfElem();
+            if (xml.FindElem("UserId")) {
+                user.id = std::stoi(xml.GetData());
+            }
+            if (xml.FindElem("FirstName")) {
+                user.firstName = xml.GetData();
+            }
+            if (xml.FindElem("LastName")) {
+                user.lastName = xml.GetData();
+            }
+            if (xml.FindElem("Login")) {
+                user.login = xml.GetData();
+            }
+            if (xml.FindElem("Password")) {
+                user.password = xml.GetData();
+            }
 
-        users.push_back(user);
-    }
-    return users;
+            xml.OutOfElem();
+
+            users.push_back(user);
+        }
+        return users;
 }
 
     bool UserFile::addUserToFile(const User &user){
@@ -91,6 +92,37 @@ using namespace std;
             xml.Save(getFileName());
 
     }
+
     bool UserFile::changePasswordInFile(int id,const string &password){
 
+        CMarkup xml;
+
+        bool fileExists = xml.Load(getFileName());
+
+        if (!fileExists) {
+            cout << "File not found or cannot be loaded!" << endl;
+            return false;
+        }
+
+        if (!xml.FindElem("Users")) {
+            cout << "No <Users> element in XML!" << std::endl;
+            return false;
+        }
+
+        xml.IntoElem();
+
+        while (xml.FindElem("User")) {
+            xml.IntoElem();
+
+            if (xml.FindElem("UserId") && stoi(xml.GetData()) == id) {
+                if (xml.FindElem("Password")) {
+                    xml.SetData(password);
+                    xml.Save(getFileName());
+                    return true;
+                }
+            }
+            xml.OutOfElem();
+        }
+        return false;
     }
+

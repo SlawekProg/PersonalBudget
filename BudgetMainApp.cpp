@@ -14,12 +14,15 @@ else
     }
     void BudgetMainApp::loginUser(){
         userManager.loginUser();
+        budgetManager = new BudgetManager(INCOME_FILE_NAME,EXPENSE_FILE_NAME,userManager.getLoggedUserId());
     }
     void BudgetMainApp::changeUserPassword(){
-
+        userManager.changeUserPassword();
     }
     void BudgetMainApp::logoutUser(){
-
+        userManager.logoutUser();
+        delete budgetManager;
+        budgetManager = NULL;
     }
 
     void BudgetMainApp::addIncome(){

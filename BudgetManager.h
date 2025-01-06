@@ -20,7 +20,9 @@ class BudgetManager
     void showBalance(int startDate,int endDate);
     double calculateBalance(int startDate,int endDate,const Type &type);
  public:
-     BudgetManager(string incomeFileName,string expenseFileName,int loggedUserId);
+     BudgetManager(string incomeFileName,string expenseFileName,int loggedUserId)
+     :incomeFile(incomeFileName),expenseFile(expenseFileName),LOGGED_USER_ID(loggedUserId){};
+
 
      void addIncome();
      void addExpense();

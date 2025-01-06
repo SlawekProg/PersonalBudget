@@ -11,21 +11,23 @@ int main()
     BudgetMainApp budgetMainApp("users.xml","incomes.xml","expenses.xml");
 
     char choice = '0';
-     system("cls");
-
-     cout << "    >>>  MAIN MENU  <<<" << endl;
-     cout << "---------------------------" << endl;
-     cout << "1. Regisration" << endl;
-     cout << "2. Log in" << endl;
-     cout << "9. End program" << endl;
-     cout << "---------------------------" << endl;
-     cout << "Your choice: ";
 
 	while (true)
 	{
 		if (!budgetMainApp.isUserLoggedIn())
 		{
-			choice = utils.getCharacter();
+
+            system("cls");
+
+             cout << "    >>>  MAIN MENU  <<<" << endl;
+             cout << "---------------------------" << endl;
+             cout << "1. Regisration" << endl;
+             cout << "2. Log in" << endl;
+             cout << "9. End program" << endl;
+             cout << "---------------------------" << endl;
+             cout << "Your choice: ";
+
+             choice = utils.getCharacter();
 
 			if (choice == '1') budgetMainApp.registerUser();
 			else if (choice == '2') budgetMainApp.loginUser();
