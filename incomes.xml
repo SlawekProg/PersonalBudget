@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Incomes>
+<Income>
+<id>1</id>
+<userId>3</userId>
+<date>20241223</date>
+<item>prezent</item>
+<amount>2500.00</amount>
+</Income>
+<Income>
+<id>2</id>
+<userId>3</userId>
+<date>20240810</date>
+<item>wyplata</item>
+<amount>5605.65</amount>
+</Income>
+<Income>
+<id>3</id>
+<userId>1</userId>
+<date>20241212</date>
+<item>premia</item>
+<amount>4500.00</amount>
+</Income>
+<Income>
+<id>4</id>
+<userId>2</userId>
+<date>20241211</date>
+<item>premia kwartalna</item>
+<amount>1500.23</amount>
+</Income>
+</Incomes>
