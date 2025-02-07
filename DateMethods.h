@@ -11,13 +11,14 @@ class DateMethods
     void calculateCurrentDate(map<string,int> &currentDate);
     int isYearLeap(int year);
 public:
-    bool validateDate(string &date);
-    int convertStringDateToInt(const string &dateAsString);
-    string convertIntDateToStringWithDashes(int dateAsInt);
-    int getCurrentDate();
-    int getCurrentMonthFirstDayDate();
-    int getPreviousMonthFirstDayDate();
-    int getPreviousMonthLastDayDate();
+    static bool validateDate(string &date);
+    static int convertStringDateToInt(const string &dateAsString);
+    static string convertIntDateToStringWithDashes(int dateAsInt);
+    static int getCurrentDate();
+    static int getCurrentMonthFirstDayDate();
+    static int getPreviousMonthFirstDayDate();
+    static int getPreviousMonthLastDayDate();
+
 };
 
 #endif

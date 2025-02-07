@@ -2,6 +2,7 @@
 #include "Markup.h"
 #include "BudgetMainApp.h"
 #include "Utils.h"
+#include <locale>
 
 using namespace std;
 

@@ -27,3 +27,17 @@ string Utils::readLine(){
 bool Utils::validateInput(string input){
     return 1;
 }
+double Utils::getValidatedAmount(){
+    string amountStr;
+
+    cout << "Podaj kwote: ";
+    amountStr = Utils::readLine();
+    replace(amountStr.begin(), amountStr.end(), ',', '.');
+
+    try {
+        return stod(amountStr);
+    } catch (const invalid_argument& e) {
+        cerr << "Blad: Niepoprawna kwota!" << endl;
+        return 0.0;
+    }
+}
