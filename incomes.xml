@@ -28,4 +28,25 @@
 <item>premia kwartalna</item>
 <amount>1500.23</amount>
 </Income>
+<Income>
+<id>5</id>
+<userId>3</userId>
+<date>20250202</date>
+<item>wyplata</item>
+<amount>5006.23</amount>
+</Income>
+<Income>
+<id>6</id>
+<userId>3</userId>
+<date>20250203</date>
+<item>premia</item>
+<amount>4025.36</amount>
+</Income>
+<Income>
+<id>7</id>
+<userId>3</userId>
+<date>20250206</date>
+<item>prezent</item>
+<amount>1250.36</amount>
+</Income>
 </Incomes>
