@@ -5,6 +5,9 @@ using namespace std;
 void BudgetManager::showBalance(int startDate,int endDate){
 
     double totalIncome = 0.0, totalExpense = 0.0;
+    sort(incomes.begin(), incomes.end(), [](const auto &a, const auto &b) {
+        return a.date < b.date;
+    });
 
     cout << "Przychody od " << startDate << " do " << endDate << ":\n";
     cout << "-------------------------------------------------\n";
@@ -16,7 +19,9 @@ void BudgetManager::showBalance(int startDate,int endDate){
             totalIncome += inc.amount;
         }
     }
-
+    sort(expenses.begin(), expenses.end(), [](const auto &a, const auto &b) {
+        return a.date < b.date;
+    });
     cout << "\nWydatki od " << startDate << " do " << endDate << ":\n";
     cout << "-------------------------------------------------\n";
     for (const auto &exp : expenses) {
@@ -34,6 +39,8 @@ void BudgetManager::showBalance(int startDate,int endDate){
     cout << "Laczne przychody: " << totalIncome << " PLN\n";
     cout << "Laczne wydatki: " << totalExpense << " PLN\n";
     cout << "Saldo: " << balance << " PLN\n";
+
+    system("pause");
 }
 double BudgetManager::calculateBalance(int startDate,int endDate){
 
@@ -45,15 +52,24 @@ void BudgetManager::addIncome(){
     income.id = incomeFile.getLastId() + 1;
     income.userId = LOGGED_USER_ID;
 
-    cout << "Podaj date przychodu w formacie rrrr-mm-dd: ";
-    date = Utils::readLine();
-    income.date = DateMethods::convertStringDateToInt(date);
+    while(true){
+        cout << "Podaj date przychodu w formacie rrrr-mm-dd: ";
+        date = Utils::readLine();
+        if(DateMethods::validateDate(date)){
+            income.date = DateMethods::convertStringDateToInt(date);
+            break;
+           }else{
+           cout << "Format daty jest niepoprawny, wpisz ponownie date: "<< endl;}
+    }
+
     cout << "Podaj opis przychodu: ";
     income.item = Utils::readLine();
     income.amount = Utils::getValidatedAmount();
 
     incomes.push_back(income);
     incomeFile.addOperationToFile(income,"Income");
+    cout << "Przychod zostal dodany";
+    system("pause");
 
 }
 void BudgetManager::addExpense(){
@@ -62,15 +78,24 @@ void BudgetManager::addExpense(){
 
     expense.id = expenseFile.getLastId() + 1;
     expense.userId = LOGGED_USER_ID;
-    cout << "Podaj date przychodu w formacie rrrr-mm-dd: ";
-    date = Utils::readLine();
-    expense.date = DateMethods::convertStringDateToInt(date);
-    cout << "Podaj opis przychodu: ";
+
+        while(true){
+        cout << "Podaj date wydatku w formacie rrrr-mm-dd: ";
+        date = Utils::readLine();
+        if(DateMethods::validateDate(date)){
+            expense.date = DateMethods::convertStringDateToInt(date);
+            break;
+           }else{
+           cout << "Format daty jest niepoprawny, wpisz ponownie date: "<< endl;}
+    }
+    cout << "Podaj opis wydatku: ";
     expense.item = Utils::readLine();
     expense.amount = Utils::getValidatedAmount();
 
     expenses.push_back(expense);
     expenseFile.addOperationToFile(expense,"Expense");
+    cout << "Wydatek zostal dodany";
+    system("pause");
 }
 void BudgetManager::showCurrentMonthBalance(){
     int startDate = DateMethods::getCurrentMonthFirstDayDate();

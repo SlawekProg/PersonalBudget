@@ -4,13 +4,14 @@
 #include <map>
 #include <string>
 #include <ctime>
+#include <regex>
 
 using namespace std;
 
 class DateMethods
 {
     void calculateCurrentDate(map<string,int> &currentDate);
-    int isYearLeap(int year);
+    static int isYearLeap(int year);
 public:
     static bool validateDate(string &date);
     static int convertStringDateToInt(const string &dateAsString);

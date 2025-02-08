@@ -31,10 +31,10 @@
 	<string>
 	<afx.h>
 
-1738925725 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmainapp.cpp
+1739003257 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmainapp.cpp
 	"BudgetMainApp.h"
 
-1738917776 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\main.cpp
+1739018512 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\main.cpp
 	<iostream>
 	"Markup.h"
 	"BudgetMainApp.h"
@@ -46,10 +46,10 @@
 	"UserManager.h"
 	"BudgetManager.h"
 
-1739001918 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.cpp
+1739016410 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.cpp
 	"BudgetManager.h"
 
-1739001986 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.h
+1739003257 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.h
 	<iostream>
 	"OperationFile.h"
 	"Utils.h"
@@ -58,14 +58,15 @@
 	"File.h"
 	<vector>
 
-1738923567 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\datemethods.cpp
+1739016091 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\datemethods.cpp
 	"DateMethods.h"
 
-1738922922 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\datemethods.h
+1739011347 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\datemethods.h
 	<iostream>
 	<map>
 	<string>
 	<ctime>
+	<regex>
 
 1738917776 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\file.cpp
 	"File.h"
@@ -96,10 +97,10 @@
 	"File.h"
 	"Markup.h"
 
-1736188440 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.cpp
+1739015043 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.cpp
 	"UserManager.h"
 
-1735924445 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.h
+1739014786 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.h
 	<iostream>
 	<vector>
 	"UserFile.h"
