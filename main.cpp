@@ -20,51 +20,72 @@ int main()
 
             system("cls");
 
-             cout << "    >>>  MAIN MENU  <<<" << endl;
-             cout << "---------------------------" << endl;
-             cout << "1. Regisration" << endl;
-             cout << "2. Log in" << endl;
-             cout << "9. End program" << endl;
-             cout << "---------------------------" << endl;
-             cout << "Your choice: ";
+            cout << "    >>>  Menu Logowania  <<<" << endl;
+            cout << "---------------------------" << endl;
+            cout << "1. Rejestracja" << endl;
+            cout << "2. Logowanie" << endl;
+            cout << "9. Zakoncz program" << endl;
+            cout << "---------------------------" << endl;
+            cout << "Wybierz pozycje z menu: ";
 
-             choice = utils.getCharacter();
+            choice = utils.getCharacter();
 
-			if (choice == '1') budgetMainApp.registerUser();
-			else if (choice == '2') budgetMainApp.loginUser();
-			else if (choice == '9') exit(0);
+            switch(choice){
+            case '1':
+                budgetMainApp.registerUser();
+                break;
+            case '2':
+                budgetMainApp.loginUser();
+                break;
+            case '9':
+                exit(0);
+            }
 		}
 		else
 		{
-		      system("cls");
+            system("cls");
 
-              cout << " >>> USER MENU <<<" << endl;
-              cout << "---------------------------" << endl;
-              cout << "1. Add Income" << endl;
-              cout << "2. Add Expense" << endl;
-              cout << "3. Show Current Month Balance" << endl;
-              cout << "4. Show Previous Month Balance" << endl;
-              cout << "5. Show Custom Period Balance" << endl;
+            cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
+            cout << "---------------------------" << endl;
+            cout << "1. Dodaj przychod" << endl;
+            cout << "2. Dodaj wydatek" << endl;
+            cout << "3. Bilans z biezacego miesiaca" << endl;
+            cout << "4. Bilans z poprzedniego miesiaca" << endl;
+            cout << "5. Bilans z wybranego okresu" << endl;
 
-              cout << "---------------------------" << endl;
-              cout << "7. Change User Password" << endl;
-              cout << "8. Logout User" << endl;
-              cout << "---------------------------" << endl;
-              cout << "Your choice: ";
+            cout << "---------------------------" << endl;
+            cout << "7. Zmien haslo" << endl;
+            cout << "8. Wyloguj" << endl;
+            cout << "---------------------------" << endl;
+            cout << "Wybierz pozycje z menu: ";
 
-			while (true)
-			{
-				choice = utils.getCharacter();
+            choice = utils.getCharacter();
 
-				if (choice == '1') budgetMainApp.addIncome();
-				else if (choice == '2') budgetMainApp.addExpense();
-				else if (choice == '3') budgetMainApp.showCurrentMonthBalance();
-				else if (choice == '4') budgetMainApp.showPreviousMonthBalance();
-				else if (choice == '5') budgetMainApp.showCustomPeriodBalance();
-				else if (choice == '7') budgetMainApp.changeUserPassword();
-				else if (choice == '8') { budgetMainApp.logoutUser(); break; }
-			}
-		}
+            switch (choice){
+            case '1':
+                budgetMainApp.addIncome();
+                break;
+            case '2':
+                budgetMainApp.addExpense();
+                break;
+            case '3':
+                budgetMainApp.showCurrentMonthBalance();
+                break;
+            case '4':
+                budgetMainApp.showPreviousMonthBalance();
+                break;
+            case '5':
+                budgetMainApp.showCustomPeriodBalance();
+                break;
+            case '7':
+                budgetMainApp.changeUserPassword();
+                break;
+            case '8':
+                budgetMainApp.logoutUser();
+                break;
+            }
+
+        }
 	}
 	return 0;
 }

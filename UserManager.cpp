@@ -49,6 +49,8 @@ using namespace std;
         User user = enterUserData();
         users.push_back(user);
         userFile.addUserToFile(user);
+        cout << "Konto zostalo utworzone,mozesz sie teraz zalogowac." << endl;
+        system ("pause");
 
     }
     void UserManager::loginUser(){

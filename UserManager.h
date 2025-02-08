@@ -22,17 +22,6 @@ class UserManager
 public:
     UserManager(string userFileName):userFile(userFileName){
         users = userFile.loadUserFromFile();
-
-        for (const User& user : users) {
-
-        cout << "UserId: " << user.id << std::endl;
-        cout << "FirstName: " << user.firstName << std::endl;
-        cout << "LastName: " << user.lastName << std::endl;
-        cout << "Login: " << user.login << std::endl;
-        cout << "Password: " << user.password << std::endl;
-        cout << "------------------------" << std::endl;
-    }
-    system("pause");
     };
 
     void registerUser();
