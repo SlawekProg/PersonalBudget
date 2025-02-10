@@ -53,11 +53,6 @@ bool OperationFile::addOperationToFile(const Operation &operation, string operat
         xml.AddElem(globalName);
     }
 
-    if (!xml.FindElem(globalName)) {
-        cerr << "Error: Could not find root element '" << globalName << "' in XML file!" << endl;
-        return false;
-    }
-
     xml.IntoElem();
     xml.AddElem(operationName);
     xml.IntoElem();
