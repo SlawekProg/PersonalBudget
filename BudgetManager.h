@@ -19,7 +19,6 @@ class BudgetManager
     vector <Operation> expenses;
 
     void showBalance(int startDate,int endDate);
-    double calculateBalance(int startDate,int endDate);
  public:
      BudgetManager(string incomeFileName,string expenseFileName,int loggedUserId)
      :incomeFile(incomeFileName),expenseFile(expenseFileName),LOGGED_USER_ID(loggedUserId){
@@ -27,7 +26,6 @@ class BudgetManager
      incomes = incomeFile.loadOperationFromFile(LOGGED_USER_ID,"Income");
      expenses = expenseFile.loadOperationFromFile(LOGGED_USER_ID,"Expense");
      };
-
 
      void addIncome();
      void addExpense();

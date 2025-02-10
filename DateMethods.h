@@ -10,7 +10,6 @@ using namespace std;
 
 class DateMethods
 {
-    void calculateCurrentDate(map<string,int> &currentDate);
     static int isYearLeap(int year);
 public:
     static bool validateDate(string &date);

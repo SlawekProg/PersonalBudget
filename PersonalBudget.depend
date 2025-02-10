@@ -34,11 +34,12 @@
 1739003257 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmainapp.cpp
 	"BudgetMainApp.h"
 
-1739018512 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\main.cpp
+1739186999 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\main.cpp
 	<iostream>
 	"Markup.h"
 	"BudgetMainApp.h"
 	"Utils.h"
+	"Menus.h"
 	<locale>
 
 1734694122 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmainapp.h
@@ -46,10 +47,10 @@
 	"UserManager.h"
 	"BudgetManager.h"
 
-1739016410 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.cpp
+1739182720 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.cpp
 	"BudgetManager.h"
 
-1739003257 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.h
+1739185967 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\budgetmanager.h
 	<iostream>
 	"OperationFile.h"
 	"Utils.h"
@@ -58,10 +59,10 @@
 	"File.h"
 	<vector>
 
-1739016091 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\datemethods.cpp
+1739185147 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\datemethods.cpp
 	"DateMethods.h"
 
-1739011347 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\datemethods.h
+1739182863 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\datemethods.h
 	<iostream>
 	<map>
 	<string>
@@ -75,7 +76,7 @@
 	<iostream>
 	"Markup.h"
 
-1738917776 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\operationfile.cpp
+1739185418 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\operationfile.cpp
 	"OperationFile.h"
 
 1738917776 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\operationfile.h
@@ -87,7 +88,7 @@
 	<iomanip>
 	<sstream>
 
-1736188440 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\userfile.cpp
+1739185418 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\userfile.cpp
 	"UserFile.h"
 
 1735924445 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\userfile.h
@@ -97,20 +98,20 @@
 	"File.h"
 	"Markup.h"
 
-1739015043 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.cpp
+1739185925 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.cpp
 	"UserManager.h"
 
-1739014786 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.h
+1739185925 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\usermanager.h
 	<iostream>
 	<vector>
 	"UserFile.h"
 	"User.h"
 	"Utils.h"
 
-1738917776 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\utils.cpp
+1739185925 source:c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\utils.cpp
 	"Utils.h"
 
-1738917776 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\utils.h
+1739185925 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\utils.h
 	<iostream>
 	<string.h>
 	<algorithm>
@@ -125,6 +126,10 @@
 	<iostream>
 
 1738659597 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\cashmethods.h
+	<iostream>
+	<string>
+
+1739186955 c:\users\lenovo\desktop\personalbudget\personalbudget\personalbudget\menus.h
 	<iostream>
 	<string>
 

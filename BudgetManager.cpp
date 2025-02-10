@@ -8,12 +8,13 @@ void BudgetManager::showBalance(int startDate,int endDate){
     sort(incomes.begin(), incomes.end(), [](const auto &a, const auto &b) {
         return a.date < b.date;
     });
-
-    cout << "Przychody od " << startDate << " do " << endDate << ":\n";
+    string sDate = DateMethods::convertIntDateToStringWithDashes(startDate);
+    string eDate = DateMethods::convertIntDateToStringWithDashes(endDate);
+    cout << "Przychody od " << sDate << " do " << eDate << ":\n";
     cout << "-------------------------------------------------\n";
     for (const auto &inc : incomes) {
         if (inc.date >= startDate && inc.date <= endDate) {
-            cout << "Data: " << inc.date
+            cout << "Data: " << DateMethods::convertIntDateToStringWithDashes(inc.date)
                       << " | Opis: " << inc.item
                       << " | Kwota: " << fixed << setprecision(2) << inc.amount << " PLN\n";
             totalIncome += inc.amount;
@@ -22,11 +23,11 @@ void BudgetManager::showBalance(int startDate,int endDate){
     sort(expenses.begin(), expenses.end(), [](const auto &a, const auto &b) {
         return a.date < b.date;
     });
-    cout << "\nWydatki od " << startDate << " do " << endDate << ":\n";
+    cout << "\nWydatki od " << sDate << " do " << eDate << ":\n";
     cout << "-------------------------------------------------\n";
     for (const auto &exp : expenses) {
         if (exp.date >= startDate && exp.date <= endDate) {
-            cout << "Data: " << exp.date
+            cout << "Data: " << DateMethods::convertIntDateToStringWithDashes(exp.date)
                       << " | Opis: " << exp.item
                       << " | Kwota: " << fixed << setprecision(2) << exp.amount << " PLN\n";
             totalExpense += exp.amount;
@@ -41,9 +42,6 @@ void BudgetManager::showBalance(int startDate,int endDate){
     cout << "Saldo: " << balance << " PLN\n";
 
     system("pause");
-}
-double BudgetManager::calculateBalance(int startDate,int endDate){
-
 }
 void BudgetManager::addIncome(){
     Operation income;
@@ -98,26 +96,42 @@ void BudgetManager::addExpense(){
     system("pause");
 }
 void BudgetManager::showCurrentMonthBalance(){
-    int startDate = DateMethods::getCurrentMonthFirstDayDate();
-    int endDate = DateMethods::getCurrentDate();
 
-    showBalance(startDate, endDate);
+    showBalance(DateMethods::getCurrentMonthFirstDayDate(), DateMethods::getCurrentDate());
 }
 void BudgetManager::showPreviousMonthBalance(){
-    int startDate = DateMethods::getPreviousMonthFirstDayDate();
-    int endDate = DateMethods::getPreviousMonthLastDayDate();
 
-    showBalance(startDate, endDate);
+    showBalance(DateMethods::getPreviousMonthFirstDayDate(), DateMethods::getPreviousMonthLastDayDate());
 }
 void BudgetManager::showCustomPeriodBalance(){
     string date;
-    cout << "Podaj date poczatkowa w formacie rrrr-mm-dd: ";
-    date = Utils::readLine();
-    int startDate = DateMethods::convertStringDateToInt(date);
+    int startDate;
+    int endDate;
+    while(true){
+        cout << "Podaj date poczatkowa w formacie rrrr-mm-dd: ";
+        date = Utils::readLine();
+        if(DateMethods::validateDate(date)){
+            startDate = DateMethods::convertStringDateToInt(date);
+            break;
+            }
+            else
+            {
+            cout << "Format daty jest niepoprawny, wpisz ponownie date: "<< endl;
+            }
+    }
 
+    while(true){
     cout << "Podaj date koncowa w formacie rrrr-mm-dd: ";
     date = Utils::readLine();
-    int endDate = DateMethods::convertStringDateToInt(date);
+    if(DateMethods::validateDate(date)){
+        endDate = DateMethods::convertStringDateToInt(date);
+        break;
+        }
+        else
+        {
+        cout << "Format daty jest niepoprawny, wpisz ponownie date: "<< endl;
+        }
+    }
 
     showBalance(startDate, endDate);
 }
