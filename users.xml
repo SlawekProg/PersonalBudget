@@ -35,4 +35,11 @@
 <Login>adi</Login>
 <Password>123</Password>
 </User>
+<User>
+<UserId>6</UserId>
+<FirstName>Arnold</FirstName>
+<LastName>Mantor</LastName>
+<Login>arnold</Login>
+<Password>123</Password>
+</User>
 </Users>

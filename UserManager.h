@@ -16,8 +16,6 @@ class UserManager
 
     bool checkIfLoginExist(const string &login);
     User enterUserData();
-    void findUserByLogin(const string &login,vector <User>::iterator &itr);
-    void findUserById(vector <User>::iterator &itr);
 
 public:
     UserManager(string userFileName):userFile(userFileName){

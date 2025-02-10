@@ -9,41 +9,30 @@ using namespace std;
         }
         return false;
     }
-
     User UserManager::enterUserData(){
 
-    User user;
+        User user;
+        if (users.empty() == true)
+            user.id = 1;
+        else
+            user.id = users.back().id + 1;
 
-    if (users.empty() == true)
-        user.id = 1;
-    else
-        user.id = users.back().id + 1;
+        cout << "Podaj imie: ";
+        user.firstName = Utils::readLine();
+        cout << "Podaj nazwisko: ";
+        user.lastName = Utils::readLine();
 
-    cout << "Podaj imie: ";
-    user.firstName = Utils::readLine();
-     cout << "Podaj nazwisko: ";
-    user.lastName = Utils::readLine();
+        do{
+            cout << "Podaj login: ";
+            user.login = Utils::readLine();
+        }
+        while (checkIfLoginExist(user.login) == true);
 
-    do
-    {
-        cout << "Podaj login: ";
-        user.login = Utils::readLine();
+        cout << "Podaj haslo: ";
+        user.password = Utils::readLine();
 
-    } while (checkIfLoginExist(user.login) == true);
-
-    cout << "Podaj haslo: ";
-    user.password = Utils::readLine();
-
-    return user;
+        return user;
     }
-
-    void UserManager::findUserByLogin(const string &login,vector <User>::iterator &itr){
-
-    }
-    void UserManager::findUserById(vector <User>::iterator &itr){
-
-    }
-
     void UserManager::registerUser(){
 
         User user = enterUserData();
@@ -56,37 +45,37 @@ using namespace std;
     void UserManager::loginUser(){
 
         User user;
-    string login = "", password = "";
+        string login = "", password = "";
 
-    cout << endl << "Podaj login: ";
-    login = Utils::readLine();
+        cout << endl << "Podaj login: ";
+        login = Utils::readLine();
 
-    vector <User>::iterator itr = users.begin();
-    while (itr != users.end())
-    {
-        if (itr->login == login)
+        vector <User>::iterator itr = users.begin();
+        while (itr != users.end())
         {
-            for (int tryNumber = 3; tryNumber > 0; tryNumber--)
+            if (itr->login == login)
             {
-                cout << "Podaj haslo. Pozostalo prob: " << tryNumber << ": ";
-                password = Utils::readLine();
-
-                if (itr->password == password)
+                for (int tryNumber = 3; tryNumber > 0; tryNumber--)
                 {
-                    cout << endl << "Zalogowales sie." << endl << endl;
-                    system("pause");
-                    loggedUserId = itr->id;
-                    return;
-                }
-            }
-            cout << "Wprowadzono 3 razy bledne haslo." << endl;
-            system("pause");
+                    cout << "Podaj haslo. Pozostalo prob: " << tryNumber << ": ";
+                    password = Utils::readLine();
 
+                    if (itr->password == password)
+                    {
+                        cout << endl << "Zalogowales sie." << endl << endl;
+                        system("pause");
+                        loggedUserId = itr->id;
+                        return;
+                    }
+                }
+                cout << "Wprowadzono 3 razy bledne haslo." << endl;
+                system("pause");
+
+            }
+            itr++;
         }
-        itr++;
-    }
-    cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
-    system("pause");
+        cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
+        system("pause");
     }
     void UserManager::changeUserPassword(){
         string newPassword = "";
@@ -107,7 +96,6 @@ using namespace std;
         cout << loggedUserId;
         system("pause");
     }
-
     bool UserManager::isUserLoggedIn(){
         if(loggedUserId == 0){
             return false;

@@ -36,13 +36,13 @@
 		<Unit filename="BudgetMainApp.h" />
 		<Unit filename="BudgetManager.cpp" />
 		<Unit filename="BudgetManager.h" />
-		<Unit filename="CashMethods.h" />
 		<Unit filename="DateMethods.cpp" />
 		<Unit filename="DateMethods.h" />
 		<Unit filename="File.cpp" />
 		<Unit filename="File.h" />
 		<Unit filename="Markup.cpp" />
 		<Unit filename="Markup.h" />
+		<Unit filename="Menus.h" />
 		<Unit filename="Operation.h" />
 		<Unit filename="OperationFile.cpp" />
 		<Unit filename="OperationFile.h" />

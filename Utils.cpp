@@ -9,7 +9,6 @@ char Utils::getCharacter(){
     while (true)
     {
         getline(cin, input);
-
         if (input.length() == 1)
         {
             sign = input[0];
@@ -24,9 +23,6 @@ string Utils::readLine(){
     getline(cin, wejscie);
     return wejscie;
 };
-bool Utils::validateInput(string input){
-    return 1;
-}
 double Utils::getValidatedAmount(){
     string amountStr;
 
@@ -36,7 +32,8 @@ double Utils::getValidatedAmount(){
 
     try {
         return stod(amountStr);
-    } catch (const invalid_argument& e) {
+    }
+    catch (const invalid_argument& e) {
         cerr << "Blad: Niepoprawna kwota!" << endl;
         return 0.0;
     }

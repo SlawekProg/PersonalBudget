@@ -11,7 +11,6 @@ class Utils
 public:
     static char getCharacter();
     static string readLine();
-    static bool validateInput(string input);
     static double getValidatedAmount();
 };
 

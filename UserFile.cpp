@@ -44,33 +44,9 @@ using namespace std;
 }
 
     bool UserFile::addUserToFile(const User &user){
-                /*
-        void addUserElementToXml(CMarkup xml)
-        {
-            string login,userID,password;
-
-            xml.AddElem("UserId",userID);
-            xml.AddElem("Login", login);
-            xml.AddElem("Password", password);
-
-        }wa
-        void addItemElementToXml(CMarkup xml)
-        {
-            string date,item,incomeId,amount;
-
-            xml.AddElem("Date",date);
-            xml.AddElem("Item",item);
-            xml.AddElem("IncomeId",incomeId);
-            xml.AddElem("Amount",amount);
-        }
-        */
-
-
 
             CMarkup xml;
-
             bool fileExists = xml.Load( getFileName() );
-
             if (!fileExists)
             {
                 xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
@@ -88,17 +64,13 @@ using namespace std;
             xml.AddElem("Login", user.login);
             xml.AddElem("Password", user.password);
 
-
             xml.Save(getFileName());
-
     }
 
     bool UserFile::changePasswordInFile(int id,const string &password){
 
         CMarkup xml;
-
         bool fileExists = xml.Load(getFileName());
-
         if (!fileExists) {
             cout << "File not found or cannot be loaded!" << endl;
             return false;
@@ -108,12 +80,9 @@ using namespace std;
             cout << "No <Users> element in XML!" << std::endl;
             return false;
         }
-
         xml.IntoElem();
-
         while (xml.FindElem("User")) {
             xml.IntoElem();
-
             if (xml.FindElem("UserId") && stoi(xml.GetData()) == id) {
                 if (xml.FindElem("Password")) {
                     xml.SetData(password);

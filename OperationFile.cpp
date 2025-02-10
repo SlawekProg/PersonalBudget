@@ -6,7 +6,7 @@ vector<Operation> OperationFile::loadOperationFromFile(const int loggedUserId,st
 
     vector<Operation> operations;
     CMarkup xml;
-     string globalName = (operationName == "Income") ? "Incomes" : "Expenses";
+    string globalName = (operationName == "Income") ? "Incomes" : "Expenses";
 
     if (!xml.Load(getFileName())) {
         cerr << "Failed to load XML file: " << getFileName() << endl;
